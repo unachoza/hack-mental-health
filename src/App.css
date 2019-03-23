@@ -1,0 +1,26 @@
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    }
+
+    h1 {
+    text-align: center;
+    }
+
+    .journal-list {
+    position: absolute;
+    width: 286px;
+    height: 363px;
+    left: 39px;
+    top: 250px;
+    border: solid black 2px;
+
+    }
+
+}
+
+

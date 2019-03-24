@@ -6,3 +6,9 @@ textarea {
     
     align-items: center;
 }
+
+.submit-button{
+       border: 1px solid black;
+       border-radius: 3px;
+       margin-left: 6vw
+}

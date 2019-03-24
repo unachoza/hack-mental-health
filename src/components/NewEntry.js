@@ -5,9 +5,7 @@ class NewEntry extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            // entry: {
-            //     text: "write here"
-            // },
+            entry: {},
             entries: []
                 
         }

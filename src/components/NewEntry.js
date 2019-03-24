@@ -39,7 +39,7 @@ class NewEntry extends Component {
                 <h1>New Entry</h1>
                 <form onSubmit={this.handleJournalSubmit}>
                     
-                    <textarea onChange={this.handleJournalInput} name="text"  id="text" cols="47" rows="10" placeholder="wrie here"></textarea>
+                    <textarea onChange={this.handleJournalInput} name="text"  id="text" cols="47" rows="10" placeholder="wrie here" value={this.state.entry}></textarea>
                     <br />
                     <input className="submit-button" type="submit" value="Submit"></input>
                 </form>

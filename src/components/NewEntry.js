@@ -6,7 +6,7 @@ class NewEntry extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            entry: {},
+            entry: '',
             entries: []
                 
         } 
@@ -15,17 +15,18 @@ class NewEntry extends Component {
 
     handleJournalInput = (e) => {
         this.setState({ entry: e.target.value })
+        console.log(this.state.entry)
     }
 
    
     handleJournalSubmit = (e) => {
         e.preventDefault()
         const currentEntry = {
-            text: this.text
+            text: this.state.entry
         }
         const newEntries = Array.from(this.state.entries)
         newEntries.push(currentEntry)
-        this.setState({ entries: newEntries })
+        this.setState({ entries: newEntries, entry: "" })
         console.log(this.state)
        
     }
@@ -33,14 +34,7 @@ class NewEntry extends Component {
     render() {
         return (
             <div>
-            <section className="entries">
-                {this.state.entries.map((entry ,i) => {
-                    return(
-                        <JournalEntry entry={this.state.entry} key={i}
-                        index={i}/>
-                    )
-                }).reverse()}
-            </section>
+            
             <div>
                 <h1>New Entry</h1>
                 <form onSubmit={this.handleJournalSubmit}>
@@ -50,6 +44,14 @@ class NewEntry extends Component {
                     <input className="submit-button" type="submit" value="Submit"></input>
                 </form>
                 </div>
+                <section className="entries">
+                {this.state.entries.map((entry ,i) => {
+                    return(
+                        <JournalEntry entry={entry} key={i}
+                        index={i}/>
+                    )
+                }).reverse()}
+            </section>
             </div>
         )
 }

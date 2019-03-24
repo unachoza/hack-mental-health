@@ -8,7 +8,7 @@ import NewEntry from './NewEntry'
         super(props)
         this.state = {
             editing: false,
-            entry: { text: ""}
+           
             
         }
         console.log("this is state:", this.state, "this is props", this.props)
@@ -22,7 +22,7 @@ import NewEntry from './NewEntry'
                         <h3>Date: March 24, 2019</h3>
                     </div> */}
                     <div className="text">
-                        <p>{this.props.entry}</p>
+                        <p>{this.props.entry.text}</p>
                     </div>
                 </div>
           </div>

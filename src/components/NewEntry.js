@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import JournalEntry from './JournalEntry'
 import './NewEntry.css'
 
 class NewEntry extends Component {
@@ -8,7 +9,8 @@ class NewEntry extends Component {
             entry: {},
             entries: []
                 
-        }
+        } 
+        
     }
 
     handleJournalInput = (e) => {
@@ -31,6 +33,15 @@ class NewEntry extends Component {
     render() {
         return (
             <div>
+            <section className="entries">
+                {this.state.entries.map((entry ,i) => {
+                    return(
+                        <JournalEntry entry={this.state.entry} key={i}
+                        index={i}/>
+                    )
+                }).reverse()}
+            </section>
+            <div>
                 <h1>New Entry</h1>
                 <form onSubmit={this.handleJournalSubmit}>
                     
@@ -38,6 +49,7 @@ class NewEntry extends Component {
                     <br />
                     <input className="submit-button" type="submit" value="Submit"></input>
                 </form>
+                </div>
             </div>
         )
 }

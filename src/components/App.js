@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import JournalEntry from './JournalEntry'
-import EntryList from './EntryList'
+// import EntryList from './EntryList'
 import NewEntry from './NewEntry'
 import '../App.css'
 
@@ -18,7 +18,7 @@ class App extends Component {
         return (
             <div>
                 <NewEntry />
-                <EntryList/>
+                {/* <EntryList/> */}
             </div>
             
         )

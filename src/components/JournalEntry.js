@@ -1,26 +1,28 @@
 import React, { Component } from 'react'
-import JournalContent from './JournalContent'
+import NewEntry from './NewEntry'
 
 
-class JournalEntry extends Component{
-    constructor() {
-        super()
+    
+   class JournalEntry extends Component{
+    constructor(props) {
+        super(props)
         this.state = {
             editing: false,
-            entry: {}
+            entry: { text: ""}
             
         }
+        console.log("this is state:", this.state, "this is props", this.props)
     }
     render() {
         return(
         <div>
                 <h1>Passion Journal</h1>
                 <div className="journal-entry">
-                    <div className="day">
+                    {/* <div className="day">
                         <h3>Date: March 24, 2019</h3>
-                    </div>
+                    </div> */}
                     <div className="text">
-                        <p>{this.state.entry.text}</p>
+                        <p>{this.props.entry}</p>
                     </div>
                 </div>
           </div>
@@ -28,7 +30,7 @@ class JournalEntry extends Component{
     }
 
 }
-    
+           
 
 
 export default JournalEntry

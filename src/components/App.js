@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import JournalContent from './JournalContent'
+import JournalEntry from './JournalEntry'
+import EntryList from './EntryList'
 import '../App.css'
 
 
@@ -14,20 +15,7 @@ class App extends Component {
     render() {
         
         return (
-            <div>
-                
-                <h1>Passion Journal</h1>
-                <div className="journal-list">
-                    <div className="day">
-                        <h3>Date: March 24, 2019</h3>
-                        <div className="title">
-                            <div className="body">
-                                <JournalContent />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-          </div>
+            <EntryList/>
         )
     }
 }

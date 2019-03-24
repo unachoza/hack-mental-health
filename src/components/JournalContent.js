@@ -25,7 +25,7 @@ class JournalContent extends Component{
     render() {
      let show = ""
         if(this.state.isHidden) {
-           show = <div>See More (hidden)</div>
+           show = <div>See More</div>
         }
         else {
         show = <div className="below-fold">
@@ -38,7 +38,7 @@ class JournalContent extends Component{
         return (
             <div>
             <div className="above-fold">
-                <p>Wack the mini furry mouse pee in the shoe, or claw drapes rub face on owner yet and sometimes switches in french and say "miaou" just because well why not or claw drapes, for i cry and cry and cry unless you pet me, and then maybe i cry just for fun. Scamper eat too much then proceed to regurgitate all over living room carpet while humans eat dinner for kick up litter make it to the carpet before i vomit<br />
+                <p>Wack the mini furry mouse pee in the shoe, or claw drapes rub face on owner yet and sometimes switches in french and say "miaou" just because well why not or claw drapes, for i cry and cry and cry unless you pet me, and then maybe i cry just for fun. Scamper eat too much then proceed to regurgitate all over living room carpet while humans eat dinner for kick up litter make it to the carpet before i vomit.<br />
                 </p>
             </div>
                 <button className="centered-button" onClick={(e) => this.toggleHidden()}>
